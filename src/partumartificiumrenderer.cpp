@@ -23,7 +23,6 @@
 
 #include <OGRE/Ogre.h>
 #include <OGRE/OgreSceneManager.h>
-#include <OGRE/OgreSceneQuery.h>
 
 #include "partumartificiumrenderer.h"
 
@@ -41,17 +40,18 @@ PartumArtificiumRenderer::~PartumArtificiumRenderer()
 
 void PartumArtificiumRenderer::createWorld()
 {
-  Ogre::Entity * ogreHead = mSceneMgr->createEntity("Head", "ogrehead.mesh");
-  Ogre::SceneNode * headNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+    Ogre::SceneManager * mSceneMgr = new Ogre::SceneManager();
+    Ogre::Entity * ogreHead = mSceneMgr->createEntity("Head", "ogrehead.mesh");
+    Ogre::SceneNode * headNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
 
-  headNode->attachObject(ogreHead);
+    headNode->attachObject(ogreHead);
 
-  /* Set ambient light. */
-  mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
+    /* Set ambient light. */
+    mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
 
-  /* Create a light. */
-  Ogre::Light * l = mSceneMgr->createLight("MainLight");
-  l->setPosition(20, 80, 50);
+    /* Create a light. */
+    Ogre::Light * l = mSceneMgr->createLight("MainLight");
+    l->setPosition(20, 80, 50);
 }
 
 void PartumArtificiumRenderer::Run()
