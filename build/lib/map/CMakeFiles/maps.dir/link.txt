@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libmaps.so -o libmaps.so CMakeFiles/maps.dir/map.cpp.o -L/home/alunduil/programs/partum-artificium-server/build/lib 

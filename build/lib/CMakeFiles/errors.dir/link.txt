@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,liberrors.so -o liberrors.so CMakeFiles/errors.dir/baseerror.cpp.o CMakeFiles/errors.dir/baseargumenterror.cpp.o -L/home/alunduil/programs/partum-artificium-server/build/lib 

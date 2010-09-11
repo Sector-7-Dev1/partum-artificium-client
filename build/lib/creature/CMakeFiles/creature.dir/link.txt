@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libcreature.so -o libcreature.so CMakeFiles/creature.dir/basecreature.cpp.o CMakeFiles/creature.dir/bodypart.cpp.o CMakeFiles/creature.dir/skill.cpp.o -L/home/alunduil/programs/partum-artificium-server/build/lib 
