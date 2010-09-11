@@ -24,7 +24,7 @@
 #include <stdio.h>
 #include <cstdlib>
 
-#include <OGRE/ogre.h>
+#include <OGRE/Ogre.h>
 
 #include "partumartificium.h"
 #include "partumartificiumrenderer.h"
@@ -32,7 +32,7 @@
 #include "../include/output.h"
 
 PartumArtificium::PartumArtificium(int argc, char *argv[])
-: debug(false), verbose(false)
+        : debug(false), verbose(false)
 {
     using namespace boost::program_options;
     std::string usage;
@@ -72,28 +72,28 @@ boost::program_options::variables_map PartumArtificium::parseOptions(int argc, c
 
 void PartumArtificium::Run()
 {
-  /**
-   * @TODO Add in a configuration item to select a different viewing engine.
-   */
-  this->renderer = new PartumArtificiumRenderer(this->debug, this->verbose);
+    /**
+     * @TODO Add in a configuration item to select a different viewing engine.
+     */
+    this->renderer = new PartumArtificiumRenderer(this->debug, this->verbose);
 
-  try
-  {
-    this->renderer->Run();
-  }
-  catch (Ogre::Exception & e)
-  {
-    ERROR(e.getFullDescription().c_str());
-  }
+    try
+    {
+        this->renderer->Run();
+    }
+    catch (Ogre::Exception & e)
+    {
+        ERROR(e.getFullDescription());
+    }
 }
 
 PartumArtificiumError::PartumArtificiumError(const std::string &message)
-: BaseError(message)
+        : BaseError(message)
 {
 }
 
 PartumArtificiumArgumentError::PartumArtificiumArgumentError(const std::string &message, const boost::program_options::options_description &description)
-: BaseArgumentError(message, description)
+        : BaseArgumentError(message, description)
 {
 }
 // kate: indent-mode cstyle; space-indent on; indent-width 4;

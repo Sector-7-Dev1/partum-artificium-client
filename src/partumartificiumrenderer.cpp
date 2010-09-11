@@ -21,6 +21,10 @@
 #include <boost/lambda/bind.hpp>
 #include <algorithm>
 
+#include <OGRE/Ogre.h>
+#include <OGRE/OgreSceneManager.h>
+#include <OGRE/OgreSceneQuery.h>
+
 #include "partumartificiumrenderer.h"
 
 #include "../include/output.h"
