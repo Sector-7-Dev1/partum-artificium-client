@@ -19,12 +19,9 @@
 */
 
 #include <iostream>
-#include <fstream>
 #include <cstdio>
 #include <stdio.h>
 #include <cstdlib>
-
-#include <OGRE/Ogre.h>
 
 #include "partumartificium.h"
 #include "partumartificiumrenderer.h"
@@ -73,18 +70,10 @@ boost::program_options::variables_map PartumArtificium::parseOptions(int argc, c
 void PartumArtificium::Run()
 {
     /**
-     * @TODO Add in a configuration item to select a different viewing engine.
+     * @TODO Add an argument to select an engine.
      */
     this->renderer = new PartumArtificiumRenderer(this->debug, this->verbose);
-
-    try
-    {
-        this->renderer->Run();
-    }
-    catch (Ogre::Exception & e)
-    {
-        ERROR(e.getFullDescription());
-    }
+    this->renderer->Run();
 }
 
 PartumArtificiumError::PartumArtificiumError(const std::string &message)

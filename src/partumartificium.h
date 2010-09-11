@@ -29,45 +29,45 @@ class PartumArtificiumRenderer;
 
 class PartumArtificium
 {
-    public:
-        /**
-         * @brief Constructor.
-         * @param argc Count of the arguments.
-         * @param argv The arguments vector.
-         */
-        PartumArtificium(int argc, char *argv[]);
+public:
+    /**
+     * @brief Constructor.
+     * @param argc Count of the arguments.
+     * @param argv The arguments vector.
+     */
+    PartumArtificium(int argc, char *argv[]);
 
-        /**
-         * @brief Run Application.
-         */
-        void Run();
+    /**
+     * @brief Run Application.
+     */
+    void Run();
 
-    private:
-        bool debug;
-        bool verbose;
+private:
+    bool debug;
+    bool verbose;
 
-        PartumArtificiumRenderer * renderer;
+    PartumArtificiumRenderer * renderer;
 
-        /**
-         * @brief Parse the command line options.
-         * @param argc The count of the arguments.
-         * @param argv The argument vector.
-         * @param description The options description pointer.
-         * @return A variables map containing all of the variables parsed.
-         */
-        boost::program_options::variables_map parseOptions(int argc, char *argv[], boost::program_options::options_description * description = new boost::program_options::options_description("Options: "));
+    /**
+     * @brief Parse the command line options.
+     * @param argc The count of the arguments.
+     * @param argv The argument vector.
+     * @param description The options description pointer.
+     * @return A variables map containing all of the variables parsed.
+     */
+    boost::program_options::variables_map parseOptions(int argc, char *argv[], boost::program_options::options_description * description = new boost::program_options::options_description("Options: "));
 };
 
 class PartumArtificiumError : public Errors::BaseError
 {
-    public:
-        PartumArtificiumError(const std::string & msg);
+public:
+    PartumArtificiumError(const std::string & msg);
 };
 
 class PartumArtificiumArgumentError : public Errors::BaseArgumentError
 {
-    public:
-        PartumArtificiumArgumentError(const std::string & msg, const boost::program_options::options_description & description);
+public:
+    PartumArtificiumArgumentError(const std::string & msg, const boost::program_options::options_description & description);
 };
 
 #endif // PARTUMARTIFICIUM_H

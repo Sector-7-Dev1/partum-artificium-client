@@ -33,22 +33,22 @@ class BaseErrorTest : public CppUnit::TestFixture
     CPPUNIT_TEST(BaseError_Instantiation_PropertiesSet);
     CPPUNIT_TEST_SUITE_END();
 
-    public:
-        /**
-         * @brief Initialize the testing environment.
-         */
-        void setUp();
+public:
+    /**
+     * @brief Initialize the testing environment.
+     */
+    void setUp();
 
-        /**
-         * @brief Tear down the testing environment.
-         */
-        void tearDown();
+    /**
+     * @brief Tear down the testing environment.
+     */
+    void tearDown();
 
-    protected:
-        void BaseError_Instantiation_PropertiesSet();
+protected:
+    void BaseError_Instantiation_PropertiesSet();
 
-    private:
-        Errors::BaseError * errorA;
+private:
+    Errors::BaseError * errorA;
 };
 
 #endif // BASEERRORTEST_H

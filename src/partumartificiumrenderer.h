@@ -25,36 +25,31 @@
 
 class PartumArtificiumRenderer
 {
-    public:
-        /**
-         * @brief Constructor.
-         */
-        PartumArtificiumRenderer(bool debug = false, bool verbose = false);
+public:
+    /**
+     * @brief Constructor.
+     */
+    PartumArtificiumRenderer(bool debug = false, bool verbose = false);
 
-        /**
-         * @brief Destructor.
-         */
-        ~PartumArtificiumRenderer();
+    /**
+     * @brief Destructor.
+     */
+    ~PartumArtificiumRenderer();
 
-        /**
-         * @brief Run the game.
-         */
-        void Run();
+    /**
+     * @brief Run the game.
+     */
+    void Run();
 
-    private:
-        /**
-         * @brief draw the world.
-         */
-        void createWorld();
-
-        bool debug;
-        bool verbose;
+private:
+    bool debug;
+    bool verbose;
 };
 
 class PartumArtificiumRendererError : public Errors::BaseError
 {
-    public:
-        PartumArtificiumRendererError(const std::string & msg);
+public:
+    PartumArtificiumRendererError(const std::string & msg);
 };
 
 #endif // PARTUMARTIFICIUMRENDERER_H

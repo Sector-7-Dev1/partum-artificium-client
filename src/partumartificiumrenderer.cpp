@@ -17,13 +17,6 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-#include <boost/lambda/lambda.hpp>
-#include <boost/lambda/bind.hpp>
-#include <algorithm>
-
-#include <OGRE/Ogre.h>
-#include <OGRE/OgreSceneManager.h>
-
 #include "partumartificiumrenderer.h"
 
 #include "../include/output.h"
@@ -31,31 +24,20 @@
 PartumArtificiumRenderer::PartumArtificiumRenderer(bool debug, bool verbose)
         : debug(debug), verbose(verbose)
 {
-    this->createWorld();
+    /**
+     * @TODO Select the rendering engine to use.
+     */
 }
 
 PartumArtificiumRenderer::~PartumArtificiumRenderer()
 {
 }
 
-void PartumArtificiumRenderer::createWorld()
-{
-    Ogre::SceneManager * mSceneMgr = new Ogre::SceneManager();
-    Ogre::Entity * ogreHead = mSceneMgr->createEntity("Head", "ogrehead.mesh");
-    Ogre::SceneNode * headNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
-
-    headNode->attachObject(ogreHead);
-
-    /* Set ambient light. */
-    mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
-
-    /* Create a light. */
-    Ogre::Light * l = mSceneMgr->createLight("MainLight");
-    l->setPosition(20, 80, 50);
-}
-
 void PartumArtificiumRenderer::Run()
 {
+    /**
+     * @TODO Run the renderer.
+     */
 }
 
 PartumArtificiumRendererError::PartumArtificiumRendererError(const std::string &message)

@@ -27,16 +27,16 @@
 
 namespace Errors
 {
-    class BaseArgumentError : public BaseError
-    {
-        public:
-            boost::program_options::options_description GetDescription() const;
+class BaseArgumentError : public BaseError
+{
+public:
+    boost::program_options::options_description GetDescription() const;
 
-            BaseArgumentError(const std::string & msg, const boost::program_options::options_description & description);
-        protected:
-            boost::program_options::options_description description;
+    BaseArgumentError(const std::string & msg, const boost::program_options::options_description & description);
+protected:
+    boost::program_options::options_description description;
 
-    };
+};
 }
 
 #endif // BASEARGUMENTERROR_H

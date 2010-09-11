@@ -25,14 +25,14 @@
 
 namespace Errors
 {
-    class BaseError
-    {
-        public:
-            std::string GetMessage() const;
-            BaseError(const std::string & msg);
-        protected:
-            std::string message;
-    };
+class BaseError
+{
+public:
+    std::string GetMessage() const;
+    BaseError(const std::string & msg);
+protected:
+    std::string message;
+};
 }
 
 #endif // BASEERROR_H

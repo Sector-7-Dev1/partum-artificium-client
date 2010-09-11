@@ -22,13 +22,13 @@
 
 namespace Errors
 {
-    BaseError::BaseError(const std::string & msg)
-            : message(msg)
-    {
-    }
+BaseError::BaseError(const std::string & msg)
+        : message(msg)
+{
+}
 
-    std::string BaseError::GetMessage() const
-    {
-        return this->message;
-    }
+std::string BaseError::GetMessage() const
+{
+    return this->message;
+}
 }

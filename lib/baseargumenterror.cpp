@@ -22,13 +22,13 @@
 
 namespace Errors
 {
-    boost::program_options::options_description BaseArgumentError::GetDescription() const
-    {
-        return this->description;
-    }
+boost::program_options::options_description BaseArgumentError::GetDescription() const
+{
+    return this->description;
+}
 
-    BaseArgumentError::BaseArgumentError(const std::string &message, const boost::program_options::options_description &description)
-            : BaseError(message), description(description)
-    {
-    }
+BaseArgumentError::BaseArgumentError(const std::string &message, const boost::program_options::options_description &description)
+        : BaseError(message), description(description)
+{
+}
 }
