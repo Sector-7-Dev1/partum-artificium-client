@@ -25,6 +25,8 @@
 #include "../include/baseerror.h"
 #include "../include/baseargumenterror.h"
 
+class PartumArtificiumRenderer;
+
 class PartumArtificium
 {
     public:
@@ -44,7 +46,7 @@ class PartumArtificium
         bool debug;
         bool verbose;
 
-        bool fullscreen;
+        PartumArtificiumRenderer * renderer;
 
         /**
          * @brief Parse the command line options.

@@ -25,6 +25,7 @@
 #include <cstdlib>
 
 #include "partumartificium.h"
+#include "partumartificiumrenderer.h"
 
 #include "../include/output.h"
 
@@ -69,6 +70,10 @@ boost::program_options::variables_map PartumArtificium::parseOptions(int argc, c
 
 void PartumArtificium::Run()
 {
+  /**
+   * @TODO Add in a configuration item to select a different viewing engine.
+   */
+  this->renderer = new PartumArtificiumRenderer(this->debug, this->verbose);
 }
 
 PartumArtificiumError::PartumArtificiumError(const std::string &message)
