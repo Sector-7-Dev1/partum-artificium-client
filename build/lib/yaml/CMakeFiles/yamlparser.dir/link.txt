@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libyamlparser.so -o libyamlparser.so CMakeFiles/yamlparser.dir/yamlspriteparser.cpp.o -L/home/alunduil/programs/partum-artificium-server/build/lib -lyaml -Wl,-rpath,/home/alunduil/programs/partum-artificium-server/build/lib 

@@ -1,0 +1,3 @@
+/home/alunduil/programs/partum-artificium-server/build/lib/creature/CMakeFiles/creature.dir
+/home/alunduil/programs/partum-artificium-server/build/lib/CMakeFiles/errors.dir
+/home/alunduil/programs/partum-artificium-server/build/src/CMakeFiles/partum-artificium.dir

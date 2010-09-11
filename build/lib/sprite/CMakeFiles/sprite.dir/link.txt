@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g  -shared -Wl,-soname,libsprite.so -o libsprite.so CMakeFiles/sprite.dir/basesprite.cpp.o CMakeFiles/sprite.dir/sprite.cpp.o CMakeFiles/sprite.dir/spriteframe.cpp.o -L/home/alunduil/programs/partum-artificium-server/build/lib -lyamlparser -lyaml -Wl,-rpath,/home/alunduil/programs/partum-artificium-server/build/lib 

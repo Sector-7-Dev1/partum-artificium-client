@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/partum-artificium.dir/main.cpp.o CMakeFiles/partum-artificium.dir/partumartificium.cpp.o  -o partum-artificium -rdynamic -L/home/alunduil/programs/partum-artificium-server/build/lib -lSDL -lboost_program_options ../lib/liberrors.so -Wl,-rpath,/home/alunduil/programs/partum-artificium-server/build/lib: 
