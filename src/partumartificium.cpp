@@ -24,6 +24,8 @@
 #include <stdio.h>
 #include <cstdlib>
 
+#include <OGRE/ogre.h>
+
 #include "partumartificium.h"
 #include "partumartificiumrenderer.h"
 
@@ -74,6 +76,15 @@ void PartumArtificium::Run()
    * @TODO Add in a configuration item to select a different viewing engine.
    */
   this->renderer = new PartumArtificiumRenderer(this->debug, this->verbose);
+
+  try
+  {
+    this->renderer->Run();
+  }
+  catch (Ogre::Exception & e)
+  {
+    ERROR(e.getFullDescription().c_str());
+  }
 }
 
 PartumArtificiumError::PartumArtificiumError(const std::string &message)

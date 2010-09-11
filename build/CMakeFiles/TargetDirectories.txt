@@ -1,2 +1,0 @@
-/home/alunduil/programs/partum-artificium-client/build/lib/CMakeFiles/errors.dir
-/home/alunduil/programs/partum-artificium-client/build/src/CMakeFiles/partum-artificium.dir
