@@ -25,16 +25,15 @@ This source file is part of the
 #include <OGRE/OgreSceneManager.h>
 #include <OGRE/OgreRenderWindow.h>
 #include <OGRE/OgreConfigFile.h>
+#include <OGRE/OgreFrameListener.h>
+#include <OGRE/OgreWindowEventUtilities.h>
 
 #include <OIS/OISEvents.h>
 #include <OIS/OISInputManager.h>
 #include <OIS/OISKeyboard.h>
 #include <OIS/OISMouse.h>
 
-#include <SdkTrays.h>
-#include <SdkCameraMan.h>
-
-class BaseOgreApplication : public Ogre::FrameListener, public Ogre::WindowEventListener, public OIS::KeyListener, public OIS::MouseListener, OgreBites::SdkTrayListener
+class BaseOgreApplication : public Ogre::FrameListener, public Ogre::WindowEventListener, public OIS::KeyListener, public OIS::MouseListener
 {
 public:
     BaseOgreApplication(void);
@@ -77,13 +76,6 @@ protected:
     Ogre::RenderWindow* mWindow;
     Ogre::String mResourcesCfg;
     Ogre::String mPluginsCfg;
-
-    // OgreBites
-    OgreBites::SdkTrayManager* mTrayMgr;
-    OgreBites::SdkCameraMan* mCameraMan;       // basic camera controller
-    OgreBites::ParamsPanel* mDetailsPanel;     // sample details panel
-    bool mCursorWasVisible;                    // was cursor visible before dialog appeared
-    bool mShutDown;
 
     //OIS Input devices
     OIS::InputManager* mInputManager;

@@ -28,10 +28,18 @@ OgreApplication::~OgreApplication(void)
 //-------------------------------------------------------------------------------------
 void OgreApplication::createScene(void)
 {
-    // create your scene here :)
+//     Ogre::Entity* ogreHead = mSceneMgr->createEntity("Head", "ogrehead.mesh");
+
+    Ogre::SceneNode* headNode = mSceneMgr->getRootSceneNode()->createChildSceneNode();
+//     headNode->attachObject(ogreHead);
+
+    // Set ambient light
+    mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
+
+    // Create a light
+    Ogre::Light* l = mSceneMgr->createLight("MainLight");
+    l->setPosition(20,80,50);
 }
-
-
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
 #define WIN32_LEAN_AND_MEAN
@@ -52,7 +60,7 @@ extern "C" {
         OgreApplication app;
 
         try {
-            app.go();
+            app.Run();
         } catch ( Ogre::Exception& e ) {
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
             MessageBox( NULL, e.getFullDescription().c_str(), "An exception has occured!", MB_OK | MB_ICONERROR | MB_TASKMODAL);

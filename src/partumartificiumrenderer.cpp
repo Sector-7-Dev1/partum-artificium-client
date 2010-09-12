@@ -21,9 +21,12 @@
 
 #include "../include/output.h"
 
+#include "../include/renderer/ogre/ogreapplication.h"
+
 PartumArtificiumRenderer::PartumArtificiumRenderer(bool debug, bool verbose)
         : debug(debug), verbose(verbose)
 {
+    this->renderer = new OgreApplication();
     /**
      * @TODO Select the rendering engine to use.
      */
@@ -31,13 +34,12 @@ PartumArtificiumRenderer::PartumArtificiumRenderer(bool debug, bool verbose)
 
 PartumArtificiumRenderer::~PartumArtificiumRenderer()
 {
+    delete this->renderer;
 }
 
 void PartumArtificiumRenderer::Run()
 {
-    /**
-     * @TODO Run the renderer.
-     */
+    this->renderer->Run();
 }
 
 PartumArtificiumRendererError::PartumArtificiumRendererError(const std::string &message)

@@ -23,6 +23,8 @@
 
 #include "../include/baseerror.h"
 
+class OgreApplication;
+
 class PartumArtificiumRenderer
 {
 public:
@@ -44,6 +46,8 @@ public:
 private:
     bool debug;
     bool verbose;
+
+    OgreApplication * renderer;
 };
 
 class PartumArtificiumRendererError : public Errors::BaseError
